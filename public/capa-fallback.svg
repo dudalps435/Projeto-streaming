@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" role="img" aria-label="Capa indisponivel">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1f2a44" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="900" fill="url(#bg)" />
+  <g fill="none" stroke="#94a3b8" stroke-width="16" opacity="0.9">
+    <rect x="120" y="180" width="360" height="540" rx="20" />
+    <path d="M180 630l90-120 70 80 80-120 60 80" />
+    <circle cx="240" cy="320" r="34" />
+  </g>
+  <text x="300" y="780" text-anchor="middle" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="34" font-weight="700">
+    CAPA INDISPONIVEL
+  </text>
+</svg>

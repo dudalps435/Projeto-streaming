@@ -1,0 +1,57 @@
+/* Estilos específicos para a Index e o Carrossel */
+.index-page {
+  text-align: center;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.carousel-viewport {
+  width: 300px; /* Mostra apenas 1 card por vez */
+  overflow: hidden; /* Esconde os outros cards da trilha */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: white;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Animação didática do movimento */
+}
+
+.carousel-slide {
+  min-width: 100%; /* Cada card ocupa 100% do viewport */
+  box-sizing: border-box;
+}
+
+.item-card {
+  padding: 20px;
+}
+
+.card-image-placeholder {
+  font-size: 4rem;
+  background: #ecf0f1;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.carousel-btn {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-btn:hover {
+  background-color: #3498db;
+}

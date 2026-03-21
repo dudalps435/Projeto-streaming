@@ -1,0 +1,365 @@
+.pagina-notificacoes {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 40px 20px;
+  color: #b0c4de;
+}
+
+.pagina-notificacoes .container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.pagina-notificacoes h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #e8f1f5;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Status Messages */
+.secao-status {
+  height: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.status {
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  animation: slideIn 0.3s ease-out;
+  width: 100%;
+  text-align: center;
+}
+
+.status.sucesso {
+  background: rgba(107, 207, 127, 0.2);
+  border-left: 4px solid #6bcf7f;
+  color: #6bcf7f;
+}
+
+.status.erro {
+  background: rgba(255, 107, 107, 0.2);
+  border-left: 4px solid #ff6b6b;
+  color: #ff6b6b;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Blocos de Configuração */
+.bloco-configuracao {
+  background: rgba(74, 127, 215, 0.08);
+  border: 1px solid rgba(74, 127, 215, 0.3);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.bloco-configuracao:hover {
+  background: rgba(74, 127, 215, 0.12);
+  border-color: rgba(74, 127, 215, 0.5);
+  transform: translateY(-2px);
+}
+
+.bloco-configuracao h2 {
+  font-size: 1.3rem;
+  color: #e8f1f5;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Checkbox Customizado */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 12px;
+  user-select: none;
+  margin-bottom: 8px;
+}
+
+.checkbox-container input {
+  display: none;
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #4a7fd7;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.checkbox-container input:checked ~ .checkbox {
+  background: #4a7fd7;
+  border-color: #4a7fd7;
+}
+
+.checkbox-container input:checked ~ .checkbox::after {
+  content: '✓';
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.checkbox-container .label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #e8f1f5;
+}
+
+.opcao-notificacao .descricao {
+  font-size: 0.9rem;
+  color: #7a8ba8;
+  margin-left: 36px;
+  margin-bottom: 16px;
+}
+
+/* Inputs Adicionais */
+.inputs-adicionais {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.input-email {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px 14px;
+  background: rgba(10, 10, 20, 0.5);
+  border: 1px solid rgba(74, 127, 215, 0.3);
+  border-radius: 6px;
+  color: #b0c4de;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.input-email:focus {
+  outline: none;
+  border-color: #4a7fd7;
+  background: rgba(10, 10, 20, 0.8);
+  box-shadow: 0 0 0 3px rgba(74, 127, 215, 0.1);
+}
+
+/* Botões */
+.btn-testar {
+  padding: 10px 16px;
+  background: rgba(107, 207, 127, 0.2);
+  border: 1px solid rgba(107, 207, 127, 0.4);
+  color: #6bcf7f;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-testar:hover:not(:disabled) {
+  background: rgba(107, 207, 127, 0.3);
+  border-color: #6bcf7f;
+  transform: translateY(-2px);
+}
+
+.btn-testar:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Agendamento */
+.agendamento {
+  background: rgba(107, 207, 127, 0.08);
+  border-color: rgba(107, 207, 127, 0.3);
+}
+
+.inputs-agendamento {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.grupo-input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.grupo-input label {
+  color: #b0c4de;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.input-select {
+  padding: 10px 12px;
+  background: rgba(10, 10, 20, 0.5);
+  border: 1px solid rgba(74, 127, 215, 0.3);
+  border-radius: 6px;
+  color: #b0c4de;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.input-select:hover,
+.input-select:focus {
+  border-color: #4a7fd7;
+  background: rgba(10, 10, 20, 0.8);
+  outline: none;
+}
+
+.input-select option {
+  background: #16213e;
+  color: #b0c4de;
+}
+
+/* Botões de Ação */
+.botoes-acao {
+  display: flex;
+  gap: 12px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.btn-primario {
+  flex: 1;
+  min-width: 200px;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #4a7fd7 0%, #357abc 100%);
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(74, 127, 215, 0.3);
+}
+
+.btn-primario:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74, 127, 215, 0.4);
+}
+
+.btn-primario:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-secundario {
+  padding: 14px 24px;
+  background: rgba(74, 127, 215, 0.1);
+  border: 1px solid rgba(74, 127, 215, 0.3);
+  color: #4a7fd7;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secundario:hover {
+  background: rgba(74, 127, 215, 0.2);
+  border-color: #4a7fd7;
+}
+
+/* Info Box */
+.info-box {
+  background: rgba(74, 127, 215, 0.05);
+  border-left: 4px solid #4a7fd7;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 40px;
+  color: #b0c4de;
+  line-height: 1.6;
+}
+
+.info-box h3 {
+  color: #e8f1f5;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.info-box ul {
+  margin: 12px 0;
+  padding-left: 20px;
+}
+
+.info-box li {
+  margin: 8px 0;
+  color: #9aafbe;
+}
+
+.info-box li strong {
+  color: #b0c4de;
+}
+
+.info-box code {
+  background: rgba(10, 10, 20, 0.5);
+  border: 1px solid rgba(74, 127, 215, 0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #6bcf7f;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+.info-box p {
+  margin: 10px 0 0 0;
+  font-size: 0.95rem;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .pagina-notificacoes h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .bloco-configuracao {
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .inputs-agendamento {
+    grid-template-columns: 1fr;
+  }
+
+  .botoes-acao {
+    flex-direction: column;
+  }
+
+  .btn-primario,
+  .btn-secundario {
+    width: 100%;
+  }
+
+  .inputs-adicionais {
+    flex-direction: column;
+  }
+
+  .input-email {
+    width: 100%;
+  }
+}
