@@ -1,43 +1,43 @@
-# 📦 Resumo de Implementação - Watchlist App com Integrações
+#  Resumo de Implementação - Watchlist App com Integrações
 
-## ✨ O Que Foi Implementado
+##  O Que Foi Implementado
 
-### 🎯 4 Integrações de Notificações Implementadas
+###  4 Integrações de Notificações Implementadas
 
-#### 1. **📧 Email (Nodemailer + Gmail)**
+#### 1. ** Email (Nodemailer + Gmail)**
 - Envio de sugestões semanais
 - Notificações quando filmes entram em novas plataformas
 - Templates HTML formatado
 - Agendamento automático (segunda-feira às 9h)
 
-#### 2. **📲 Web Push Notifications**
+#### 2. ** Web Push Notifications**
 - Alertas no navegador
 - Service Worker integrado (`public/sw.js`)
 - Cliques em notificações redirecionam para o app
 - Suporte a ícones e badges customizados
 
-#### 3. **📱 Telegram Bot**
+#### 3. ** Telegram Bot**
 - Mensagens diretas via bot
 - Sugestões semanais formatadas com Markdown
 - Alertas de novas plataformas
 - Requer apenas token do bot
 
-#### 4. **💬 Discord Webhooks**
+#### 4. ** Discord Webhooks**
 - Mensagens em canais Discord
 - Embeds formatados com cores
 - Thumbnails de filmes
 - Links diretos para detalhes
 
-#### 5. **🎬 JustWatch Service**
+#### 5. ** JustWatch Service**
 - Monitoramento de disponibilidade por país
 - Detecta quando filmes entram em novas plataformas
 - Fallback com dados simulados
 
 ---
 
-## 📁 Arquivos Criados/Modificados
+##  Arquivos Criados/Modificados
 
-### 🆕 Novos Arquivos
+###  Novos Arquivos
 
 | Arquivo | Descrição |
 |---------|-----------|
@@ -50,24 +50,24 @@
 | `INTEGRATIONS_GUIDE.md` | Guia completo de setup das integrações |
 | `QUICK_START.md` | Guia rápido para começar |
 
-### ✏️ Arquivos Modificados
+###  Arquivos Modificados
 
 | Arquivo | Mudanças |
 |---------|----------|
 | `src/App.jsx` | Adicionada rota `/notificacoes` → `PaginaNotificacoes` |
-| `src/App.css` | Novo botão flutuante 🔔 de notificações |
+| `src/App.css` | Novo botão flutuante de notificações |
 | `src/Pages/PaginaInicio.jsx` | Botão flutuante para acessar configurações |
 | `package.json` | Scripts `server` e `dev:full` adicionados |
 
 ---
 
-## 🎨 Página de Notificações (PaginaNotificacoes)
+##  Página de Notificações (PaginaNotificacoes)
 
 ### Funcionalidades
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│ 🔔 Configurar Notificações                                  │
+│  Configurar Notificações                                  │
 ├─────────────────────────────────────────────────────────────┤
 │                                                              │
 │ [✓] 📧 Email Semanal                                        │
@@ -93,17 +93,17 @@
 
 ### Recursos
 
-- ✅ Ativar/desativar cada canal
-- 🧪 Botão de teste para cada serviço
-- ⏰ Configurar dia e horário
-- 🌍 Selecionar país
-- 💾 Salvar em localStorage
-- 📊 Status de sucesso/erro
-- 📱 Responsivo (mobile-friendly)
+-  Ativar/desativar cada canal
+-  Botão de teste para cada serviço
+-  Configurar dia e horário
+-  Selecionar país
+-  Salvar em localStorage
+-  Status de sucesso/erro
+-  Responsivo (mobile-friendly)
 
 ---
 
-## 🔌 API Routes (Backend)
+##  API Routes (Backend)
 
 ### Email Endpoints
 ```bash
@@ -149,7 +149,7 @@ GET /api                     # Documentação de rotas
 
 ---
 
-## ⏰ Agendamento Automático (node-schedule)
+##  Agendamento Automático (node-schedule)
 
 | Tarefa | Frequência | Canais |
 |--------|-----------|--------|
@@ -164,10 +164,10 @@ NODE_ENV=development
 
 ---
 
-## 📧 Exemplo de Email Enviado
+##  Exemplo de Email Enviado
 
 ```html
-<h2>🎬 Suas Sugestões Semanais de Filmes</h2>
+<h2> Suas Sugestões Semanais de Filmes</h2>
 
 📽️ Inception
 ⭐ Avaliação: 8.8
@@ -181,10 +181,10 @@ NODE_ENV=development
 
 ---
 
-## 🤖 Exemplo Mensagem Telegram
+##  Exemplo Mensagem Telegram
 
 ```
-🎬 *Sugestões Semanais de Filmes*
+ *Sugestões Semanais de Filmes*
 
 📽️ *Inception*
 ⭐ Avaliação: 8.8
@@ -196,11 +196,11 @@ NODE_ENV=development
 
 ---
 
-## 💬 Exemplo Embed Discord
+##  Exemplo Embed Discord
 
 ```
 ═══════════════════════════════════════
-  🎬 Sugestões Semanais de Filmes
+   Sugestões Semanais de Filmes
 ═══════════════════════════════════════
 
 📽️ Inception
@@ -209,7 +209,7 @@ NODE_ENV=development
 
 ---
 
-## 📊 Dependências Adicionadas
+##  Dependências Adicionadas
 
 ```bash
 npm install \
@@ -225,7 +225,7 @@ npm install \
 
 ---
 
-## 🔒 Segurança
+##  Segurança
 
 ### Variáveis Sensíveis (em `.env`)
 ```env
@@ -243,7 +243,7 @@ VAPID_PRIVATE_KEY=xyz       # NUNCA commitar no git
 
 ---
 
-## 🎯 Como Começar
+##  Como Começar
 
 ### 1. Setup Rápido
 ```bash
@@ -273,7 +273,7 @@ npm run dev:full            # Frontend + Backend
 
 ---
 
-## 📈 O Que Pode Ser Expandido
+##  O Que Pode Ser Expandido
 
 1. **Banco de Dados:**
    - Persistir preferências em MongoDB
@@ -295,7 +295,7 @@ npm run dev:full            # Frontend + Backend
 
 ---
 
-## ✅ Checklist Final
+##  Checklist Final
 
 - [x] Email (Nodemailer)
 - [x] Web Push (web-push)
@@ -312,7 +312,7 @@ npm run dev:full            # Frontend + Backend
 
 ---
 
-## 🚀 Status de Produção
+##  Status de Produção
 
 | Item | Status |
 |------|--------|
@@ -323,9 +323,3 @@ npm run dev:full            # Frontend + Backend
 | Telegram | ✅ Pronto |
 | Discord | ✅ Pronto |
 | Documentação | ✅ Completa |
-
-**Próximo Step:** Preencher `.env` com suas credenciais e começar a usar! 🎬✨
-
----
-
-**Desenvolvido com ❤️ para cinéfilos** 🎭🍿
